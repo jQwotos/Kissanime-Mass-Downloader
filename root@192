@@ -60,10 +60,8 @@ class Thread_Handler:
         elif parser.args.link != "null":
             self.send(parser.args.link)
         else:
-            output.send("No longer supporting this style of launching, please use")
-            output.send("python3 Alpha* -l [link]")
-            output.send("replace [link] with the link, add --help for more information and don't type the []")
-            exit()
+            output.send("No link found, please specify using -l (--help for help menu) or input now")
+            self.send(input())
 
         self.start()
 
@@ -181,7 +179,6 @@ class Downloader:
                             if parser.args.wget:
                                 wget.download(hyperLink, currentEpStr + ".mp4")
                             else:
-                                print("Downloading using requests, if you want to use wget please specify using -w when starting program")
                                 epiLink = currentEpStr + ".mp4"
                                 if os.path.exists(epiLink):
                                     os.remove(epiLink)
