@@ -126,7 +126,7 @@ class Downloader:
 
     def findPrev(self):
         try:
-            title = str(re.findall(r'https://kissanime.to/Anime/(.*)', self.seriesLink)[0]) + "/"
+            title = str(re.findall(r'kissanime.to/Anime/(.*)', self.seriesLink)[0]) + "/"
             if parser.args.fancyname:
                 title = title.replace("-Dub", "").replace("-Sub", "").replace("-", " ")
         except:
@@ -181,14 +181,15 @@ class Downloader:
                             if parser.args.wget:
                                 wget.download(hyperLink, currentEpStr + ".mp4")
                             else:
-                                print("Downloading using requests, if you want to use wget please specify using -w when starting program")
-                                epiLink = currentEpStr + ".mp4"
+                                print("Downloading using requests")
+                                epiLink = currentEpStr + ".tmp"
                                 if os.path.exists(epiLink):
                                     os.remove(epiLink)
                                 request = requests.get(hyperLink, timeout=30, stream=True)
                                 with open(epiLink, 'wb') as f:
                                     for chunk in request.iter_content(1024 * 1024):
                                         f.write(chunk)
+                                os.rename(epiLink, currentEpStr + ".mp4")
                             break
                         except Exception as exp:
                             output.send(exp)
