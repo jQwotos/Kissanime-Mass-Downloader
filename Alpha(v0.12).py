@@ -40,10 +40,11 @@ class Parse:
     def __init__(self):
         parser = argparse.ArgumentParser()
         parser.add_argument("-l", "--link", help="Link to series (https://kissanime.to/Anime/Sword-Art-Online-Dub)", type=str, nargs="?", default="null")
-        parser.add_argument("-d", "--delete", help="After scanning, the program will ask you to remove extras found such as intros.", action="store_true")
         parser.add_argument("-f", "--file", help="Import shows from file", type=str, nargs="?", default="null")
+        parser.add_argument("-d", "--delete", help="After scanning, the program will ask you to remove extras found such as intros.", action="store_true")
         parser.add_argument("-n", "--fancyname", help="Auto name the folder without - or dub or sub", action="store_true")
         parser.add_argument("-w", "--wget", help="Use the wget module rather than requests to download", action="store_true")
+        parser.add_argument("-c", "--directory", help="Specify a custom directory where the anime will be downloaded", type=str, nargs="?", default="Downloads")
         self.args = parser.parse_args()
 
 class Thread_Handler:
@@ -134,8 +135,13 @@ class Downloader:
             exit()
         self.downloadedEp = []
         self.convertedDownloads = []
-        if not os.path.exists("Downloads"): os.makedirs("Downloads")
-        os.chdir("Downloads")
+        if parser.args.directory:
+            print(parser.args.directory)
+            if not os.path.exists(parser.args.directory): os.makedirs(parser.args.directory)
+            os.chdir(parser.args.directory)
+        else:
+            if not os.path.exists("Downloads"): os.makedirs("Downloads")
+            os.chdir("Downloads")
         if not os.path.exists(title):
             os.makedirs(title)
             os.chdir(title)
@@ -206,8 +212,8 @@ class Out:
     def send(self, msg):
         print(str(msg))
 
+parser = Parse()
 downloader = Downloader()
 output = Out()
 scrape = CFScrapeLogin()
-parser = Parse()
 handler = Thread_Handler()
