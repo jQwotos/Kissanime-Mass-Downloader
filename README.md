@@ -1,7 +1,7 @@
 ### Please update your version of cfscrape https://github.com/Anorov/cloudflare-scrape
 
 # Kiss anime downloader
-## Help and Usage
+### Help and Usage
 ```
 usage: Alpha(v0.12).py [-h] [-l [LINK]] [-f [FILE]] [-d] [-n] [-w]
                        [-c [DIRECTORY]]
@@ -21,6 +21,13 @@ optional arguments:
                         Specify a custom directory where the anime will be
                         downloaded
 ```
+### Installation
+```
+git clone https://github.com/jQwotos/Kissanime-Mass-Downloader
+cd Kissanime-Mass-Downloader/
+pip install -r requirements.txt
+apt-get install nodejs
+```
 ### Example file
 ```
 https://kissanime.to/Anime/Sword-Art-Online-Dub
@@ -29,22 +36,6 @@ https://kissanime.to/Anime/Log-Horizon-Dub
 
 ## Desc
 A quick script written in python that will auto download all episodes found within a series. Simply boot up the program with Python3 and give it the link to the show when it ask.
-
-## Requirements
-Requires Python 3.x, cfscrape, requests, Nodejs or PyV8, PyExecJS, re, BeautifulSoup4, wget, and kivy
-
-Download them using: 
-```
-    pip3 install cfscrape requests pyexecjs bs4 wget
-```
-- If your running any distro that has the debian repository (debian, ubuntu ...) you can install NodeJS
-```
-    sudo su
-    apt-get install nodejs
- ```
-
-- If your on windows or mac visit
-    https://nodejs.org/en/download/
 
 Version> >= Alpha(v0.11).py
 - Updated args with new forces
