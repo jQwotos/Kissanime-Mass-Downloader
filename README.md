@@ -1,24 +1,31 @@
 ### Please update your version of cfscrape https://github.com/Anorov/cloudflare-scrape
 
 # Kiss anime downloader
-## Usage
+## Help and Usage
 ```
-python3 Alpha(v0.*).py
-```
-## Valid Arguments
-```
--l [direct link to anime (https://kissanime.to/Anime/Sword-Art-Online-Dub)]
--f [file containing links (used for downloading many series at once)]
+usage: Alpha(v0.12).py [-h] [-l [LINK]] [-f [FILE]] [-d] [-n] [-w]
+                       [-c [DIRECTORY]]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -l [LINK], --link [LINK]
+                        Link to series (https://kissanime.to/Anime/Sword-Art-
+                        Online-Dub)
+  -f [FILE], --file [FILE]
+                        Import shows from file
+  -d, --delete          After scanning, the program will ask you to remove
+                        extras found such as intros.
+  -n, --fancyname       Auto name the folder without - or dub or sub
+  -w, --wget            Use the wget module rather than requests to download
+  -c [DIRECTORY], --directory [DIRECTORY]
+                        Specify a custom directory where the anime will be
+                        downloaded
 ```
 ### Example file
 ```
 https://kissanime.to/Anime/Sword-Art-Online-Dub
 https://kissanime.to/Anime/Log-Horizon-Dub
 ```
-
-## Options
-* -d (if the series contains intro videos or such use this arg, it will require you to input the link to the exclutions after)
-* -c (use command line rather than kivy ui)
 
 ## Desc
 A quick script written in python that will auto download all episodes found within a series. Simply boot up the program with Python3 and give it the link to the show when it ask.
