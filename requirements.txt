@@ -1,0 +1,5 @@
+cfscrape
+requests
+pyexecjs
+bs4
+wget
