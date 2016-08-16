@@ -1,17 +1,4 @@
 '''
-Dependencies: Python 3.x, cfscrape, requests, Nodejs or PyV8, PyExecJS, BeautifulSoup4, wget, kivy
-You only need kivy if you are using the UI rather than command line. To specify that you want to use command line add a -c to your command
-Download them using:
-    pip3 install cfscrape requests pyexecjs bs4 wget
-- If your running any distro that has the debian repository (debian, ubuntu ...) you can install NodeJS and kivy
-    sudo su
-    apt-get install nodejs software-properties-common
-    apt-get update
-    apt-get install python3-kivy
-
-- If your on windows or mac visit
-    https://nodejs.org/en/download/
-
 Author: Jason Le
 Email: le.kent.jason@gmail.com
 Github: jQwotos
