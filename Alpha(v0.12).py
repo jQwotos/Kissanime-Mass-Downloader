@@ -100,8 +100,8 @@ class Downloader:
             for link in tobeDeleted:
                 del self.showLinks[self.showLinks.index(link)]
             output.send("Updated list:")
-        for link in self.showLinks:
-            output.send(link)
+            for link in self.showLinks:
+                output.send(link)
         self.totalEpisodes = len(self.showLinks)
         output.send(str(self.totalEpisodes) + " episodes found")
 
@@ -123,11 +123,16 @@ class Downloader:
         self.downloadedEp = []
         self.convertedDownloads = []
         if parser.args.directory:
-            print(parser.args.directory)
-            if not os.path.exists(parser.args.directory): os.makedirs(parser.args.directory)
+            print("Searching for: ", parser.args.directory)
+            if not os.path.exists(parser.args.directory):
+                print("Directory non existant, i'll make it for you.")
+                os.makedirs(parser.args.directory)
             os.chdir(parser.args.directory)
+            print("Found the directory, navigating into it.")
         else:
-            if not os.path.exists("Downloads"): os.makedirs("Downloads")
+            print("No directory was supplied, I will be using default.")
+            if not os.path.exists("Downloads"):
+                os.makedirs("Downloads")
             os.chdir("Downloads")
         if not os.path.exists(title):
             os.makedirs(title)
@@ -137,9 +142,11 @@ class Downloader:
             os.chdir(title)
             output.send(str(os.getcwd()))
             output.send("Found a previously downloaded episodes")
+            print("I will be scanning the directory for the episodes now.")
             self.downloadedEp = glob.glob("*")
             for ep in range(len(self.downloadedEp)):
                 if not self.downloadedEp[ep].endswith(".mp4"):
+                    print("Deleting: ", self.downloadedEp[ep])
                     os.remove(self.downloadedEp[ep])
                 else:
                     self.convertedDownloads.append(int(self.downloadedEp[ep].replace(".mp4", "")))
