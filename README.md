@@ -21,14 +21,14 @@ optional arguments:
                         Specify a custom directory where the anime will be
                         downloaded
 ```
-### Installation
+### Installation on Linux
 ```
 git clone https://github.com/jQwotos/Kissanime-Mass-Downloader
 cd Kissanime-Mass-Downloader/
 pip install -r requirements.txt
 apt-get install nodejs
 ```
-### Example file
+### Example input file
 ```
 https://kissanime.to/Anime/Sword-Art-Online-Dub
 https://kissanime.to/Anime/Log-Horizon-Dub
