@@ -3,7 +3,7 @@ Author: Jason Le
 Email: le.kent.jason@gmail.com
 Github: jQwotos
 '''
-import requests, cfscrape, os, re, glob, sys, argparse, threading, wget
+import requests, cfscrape, os, re, glob, sys, argparse, threading, wget, time
 from bs4 import BeautifulSoup
 
 class CFScrapeLogin:
@@ -32,40 +32,49 @@ class Parse:
         parser.add_argument("-n", "--fancyname", help="Auto name the folder without - or dub or sub", action="store_true")
         parser.add_argument("-w", "--wget", help="Use the wget module rather than requests to download", action="store_true")
         parser.add_argument("-c", "--directory", help="Specify a custom directory where the anime will be downloaded", type=str, nargs="?", default="Downloads")
+        parser.add_argument("-a", "--continous", help="For series that are still airing, continue to keep folder updated", action="store_true")
         self.args = parser.parse_args()
 
 class Thread_Handler:
     def __init__(self):
         self.toBeDownloaded = []
+
+        # Read from input file
         if parser.args.file != "null":
             if os.path.isfile(parser.args.file):
                 with open(str(parser.args.file)) as f:
                     for line in f:
                         self.toBeDownloaded.append(line.replace("\n", ""))
-                self.send()
             else:
                 output.send("Unable to find your input file")
-        elif parser.args.link != "null":
-            self.send(parser.args.link)
+
+        # Read from in-line link
+        if parser.args.link != "null":
+            self.toBeDownloaded.append(parser.args.link)
+
+        if parser.args.link == "null" and parser.args.file == "null":
+            self.toBeDownloaded.append(input("Please input link: "))
+
+        # Fixes links
+        for link in range(len(self.toBeDownloaded)):
+            if "kissanime.to" not in self.toBeDownloaded[link]:
+                self.toBeDownloaded[link] = "https://kissanime.to/Anime/" + self.toBeDownloaded[link]
+
+        if parser.args.continous:
+            while True:
+                print("Running on continous update mode, press Ctrl + C to quit.")
+                self.start()
+                print("Waiting another hour before updating")
+                time.sleep(3600) #3600
         else:
-            output.send("No longer supporting this style of launching, please use")
-            output.send("python3 Alpha* -l [link]")
-            output.send("replace [link] with the link, add --help for more information and don't type the []")
-            exit()
-
-        self.start()
-
-
-    def send(self, showLink = "null"):
-        if showLink != "null": self.toBeDownloaded.append(showLink)
+            self.start()
 
     def start(self):
-        while len(self.toBeDownloaded) >= 1:
-            print("Starting to download: " + self.toBeDownloaded[0])
-            downloader.start(self.toBeDownloaded[0])
-            print("Finished downloading: " + self.toBeDownloaded[0])
-            for x in range(2): os.chdir('..')
-            del self.toBeDownloaded[0]
+        for dld in self.toBeDownloaded:
+            print("Starting to Download: ", dld)
+            downloader.start(dld)
+            os.chdir("../..")
+            print("Finished downloading: ", dld)
 
 class Downloader:
     def __init__(self, showLink = "https://kissanime.to/Anime/Sword-Art-Online-Dub"):
@@ -75,14 +84,18 @@ class Downloader:
         self.seriesLink = showLink
         self.findEpisodes()
 
+    # Find all episode links
     def findEpisodes(self):
         showPage = scrape.scraper.get(self.seriesLink).content
-        soupShowPage = BeautifulSoup(showPage)
+        soupShowPage = BeautifulSoup(showPage, "html.parser")
 
+        # Find links to episodes and compile into self.showLinks
         self.showLinks = []
         for link in soupShowPage.findAll(attrs={'title' : re.compile("^Watch anime")}):
             output.send(link.get("href"))
             self.showLinks.append(link.get("href"))
+
+        # Start of deletion menu
         if parser.args.delete:
             tobeDeleted = []
             while True:
@@ -96,12 +109,13 @@ class Downloader:
                             output.send("Deleting:" + str(link))
                 except:
                     output.send("Unable to find that link")
-
             for link in tobeDeleted:
                 del self.showLinks[self.showLinks.index(link)]
             output.send("Updated list:")
             for link in self.showLinks:
                 output.send(link)
+        # End of deletion menu
+
         self.totalEpisodes = len(self.showLinks)
         output.send(str(self.totalEpisodes) + " episodes found")
 
@@ -161,7 +175,7 @@ class Downloader:
                 doubleBreak = False
 
                 page = scrape.scraper.get(scrape.URL + self.showLinks[currentEp - 1]).content
-                soupedUp = BeautifulSoup(page)
+                soupedUp = BeautifulSoup(page, "html.parser")
 
                 for link in soupedUp.find_all("a"):
                     # Only take the highest quality and do a double break
@@ -183,8 +197,6 @@ class Downloader:
                             else:
                                 print("Downloading using requests")
                                 epiLink = currentEpStr + ".tmp"
-                                if os.path.exists(epiLink):
-                                    os.remove(epiLink)
                                 request = requests.get(hyperLink, timeout=30, stream=True)
                                 with open(epiLink, 'wb') as f:
                                     for chunk in request.iter_content(1024 * 1024):
@@ -195,12 +207,10 @@ class Downloader:
                             output.send(exp)
                             trials += 1
                             output.send("Failed to download, retrying")
-                    print('\n')
+
                     output.send("Finished downloading episode:" + currentEpStr)
-                    scrape.downloaded.append(currentEpStr)
                 else:
                     output.send("Unable to find a link for episode: " + currentEpStr)
-                    scrape.undownlodable.append(currentEpStr)
 
 class Out:
     def send(self, msg):

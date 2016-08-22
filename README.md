@@ -3,8 +3,8 @@
 # Kiss anime downloader
 ### Help and Usage
 ```
-usage: Alpha(v0.12).py [-h] [-l [LINK]] [-f [FILE]] [-d] [-n] [-w]
-                       [-c [DIRECTORY]]
+usage: Alpha(v0.13).py [-h] [-l [LINK]] [-f [FILE]] [-d] [-n] [-w]
+                       [-c [DIRECTORY]] [-a]
 
 optional arguments:
   -h, --help            show this help message and exit
@@ -20,15 +20,17 @@ optional arguments:
   -c [DIRECTORY], --directory [DIRECTORY]
                         Specify a custom directory where the anime will be
                         downloaded
+  -a, --continous       For series that are still airing, continue to keep
+                        folder updated
 ```
-### Installation
+### Installation on Linux
 ```
 git clone https://github.com/jQwotos/Kissanime-Mass-Downloader
 cd Kissanime-Mass-Downloader/
 pip install -r requirements.txt
 apt-get install nodejs
 ```
-### Example file
+### Example input file
 ```
 https://kissanime.to/Anime/Sword-Art-Online-Dub
 https://kissanime.to/Anime/Log-Horizon-Dub
@@ -37,7 +39,11 @@ https://kissanime.to/Anime/Log-Horizon-Dub
 ## Desc
 A quick script written in python that will auto download all episodes found within a series. Simply boot up the program with Python3 and give it the link to the show when it ask.
 
-Version> >= Alpha(v0.11).py
+Version >= Alpha(v0.13).py
+- Added continous mode
+- Allowed for part links, instead of https://kissanime.to/Anime/Rewrite, it now accepts Rewrite
+
+Version >= Alpha(v0.11).py
 - Updated args with new forces
 
 Version >= Alpha(v0.07)
