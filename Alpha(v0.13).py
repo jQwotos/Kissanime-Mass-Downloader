@@ -78,7 +78,7 @@ class Thread_Handler:
 
 class Downloader:
     def __init__(self, showLink = "https://kissanime.to/Anime/Sword-Art-Online-Dub"):
-        self.acceptableQualities = ["1920x1080.mp4", "1280x720.mp4", "854x480.mp4", "640x360.mp4"]
+        self.acceptableQualities = ["1920x1080.mp4", "1280x720.mp4", "854x480.mp4", "640x360.mp4", "960x720.mp4", "480x360.mp4"]
 
     def start(self, showLink = "https://kissanime.to/Anime/Sword-Art-Online-Dub"):
         self.seriesLink = showLink
