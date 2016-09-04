@@ -1,9 +1,14 @@
 ### Please update your version of cfscrape https://github.com/Anorov/cloudflare-scrape
 
 # Kiss anime downloader
+### Quick Usage
+```
+python3 Alpha* -l Log-Horizon-Dub
+```
+
 ### Help and Usage
 ```
-usage: Alpha(v0.13).py [-h] [-l [LINK]] [-f [FILE]] [-d] [-n] [-w]
+usage: python3 Alpha(v0.13).py [-h] [-l [LINK]] [-f [FILE]] [-d] [-n] [-w]
                        [-c [DIRECTORY]] [-a]
 
 optional arguments:
@@ -30,10 +35,19 @@ cd Kissanime-Mass-Downloader/
 pip install -r requirements.txt
 apt-get install nodejs
 ```
+
+### Installation on Mac
+```
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew install python3 git nodejs
+cd Kissanime-Mass-Downloader/
+pip3 install -r requirements.txt
+```
 ### Example input file
 ```
 https://kissanime.to/Anime/Sword-Art-Online-Dub
 https://kissanime.to/Anime/Log-Horizon-Dub
+Charlotte-Sub
 ```
 
 ## Desc
