@@ -207,6 +207,8 @@ class Downloader:
                             output.send(exp)
                             trials += 1
                             output.send("Failed to download, retrying")
+                            os.remove(epiLink)
+
 
                     output.send("Finished downloading episode:" + currentEpStr)
                 else:
