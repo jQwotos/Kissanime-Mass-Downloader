@@ -30,9 +30,9 @@ optional arguments:
 ```
 ### Installation on Linux
 #### Automated
-'''
+```
 wget https://raw.githubusercontent.com/jQwotos/Kissanime-Mass-Downloader/master/install.sh && sudo chmod +x install.sh && sudo ./install.sh
-'''
+```
 #### Manual
 ```
 git clone https://github.com/jQwotos/Kissanime-Mass-Downloader
