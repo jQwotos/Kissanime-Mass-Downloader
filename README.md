@@ -55,6 +55,11 @@ https://kissanime.to/Anime/Log-Horizon-Dub
 Charlotte-Sub
 ```
 
+## Bugs with Kissanime
+This script isn't yet able to handle crashes on Kissanime's end. For now you can just restart the script after 10 - 30 seconds and unless Kissanime is under maintnance it should fix itself. (I'm still working on V2, however Kissanime keeps updating their site to block it). Here are some errors that we can't handle and what they will say.
+* 500 Error on per Episode page ("Unable to find a link for episode: *")
+* This service is not available ("Unable to find episodes, is kissanime.to down or maybe your network")
+
 ## Desc
 A quick script written in python that will auto download all episodes found within a series. Simply boot up the program with Python3 and give it the link to the show when it ask.
 
