@@ -1,6 +1,8 @@
 ### Please update your version of cfscrape https://github.com/Anorov/cloudflare-scrape
 
 # Kiss anime downloader
+A CLI program designed for servers to download full seasons of anime from Kissanime.
+I suggest using this on a Plex server, but it can also be used in any environment.
 ### Quick Usage
 ```
 python3 Alpha* -l Log-Horizon-Dub
