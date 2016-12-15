@@ -1,5 +1,4 @@
-### Please update your version of cfscrape https://github.com/Anorov/cloudflare-scrape
-### Kissanime.to may be down! Please check status http://kissanime.to/
+### Kissanime.to is currently offline. [Check status](reddit.com/r/kissanime)
 
 # Kiss anime downloader
 A CLI program designed for servers to download full seasons of anime from Kissanime.
