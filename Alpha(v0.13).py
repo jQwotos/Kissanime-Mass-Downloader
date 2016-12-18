@@ -10,7 +10,7 @@ class CFScrapeLogin:
     def __init__(self):
         output.send("Initializing Scraper, this may take 5 - 10 seconds")
         self.scraper = cfscrape.create_scraper()
-        self.URL = "https://kissanime.to/"
+        self.URL = "https://kissanime.ru/"
         self.downloaded = []
         self.undownlodable = []
         LoginURL = self.URL + "Login"
@@ -57,8 +57,8 @@ class Thread_Handler:
 
         # Fixes links
         for link in range(len(self.toBeDownloaded)):
-            if "kissanime.to" not in self.toBeDownloaded[link]:
-                self.toBeDownloaded[link] = "https://kissanime.to/Anime/" + self.toBeDownloaded[link]
+            if "kissanime.ru" not in self.toBeDownloaded[link]:
+                self.toBeDownloaded[link] = "https://kissanime.ru/Anime/" + self.toBeDownloaded[link]
 
         if parser.args.continous:
             while True:
@@ -128,7 +128,7 @@ class Downloader:
 
     def findPrev(self):
         try:
-            title = str(re.findall(r'kissanime.to/Anime/(.*)', self.seriesLink)[0]) + "/"
+            title = str(re.findall(r'kissanime.ru/Anime/(.*)', self.seriesLink)[0]) + "/"
             if parser.args.fancyname:
                 title = title.replace("-Dub", "").replace("-Sub", "").replace("-", " ")
         except:
