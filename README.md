@@ -1,11 +1,11 @@
-### Kissanime.to is currently offline. [Check status](https://reddit.com/r/kissanime)
+### [Check status](https://reddit.com/r/kissanime)
 
 # Kiss anime downloader
 A CLI program designed for servers to download full seasons of anime from Kissanime.
 I suggest using this on a Plex server, but it can also be used in any environment.
 ### Quick Usage
 ```
-python3 Alpha* -l Log-Horizon-Dub
+python3 Alpha(v0.13).py -l Log-Horizon-Dub
 ```
 
 ### Help and Usage
