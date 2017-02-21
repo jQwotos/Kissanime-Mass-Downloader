@@ -1,0 +1,111 @@
+DEBUG:root:Scraper has been initialized.
+DEBUG:root:Attempted to login with credentials {'password': 'Naal1933', 'next': '/', 'username': 'Naal1933'}
+DEBUG:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): kissanime.ru
+DEBUG:requests.packages.urllib3.connectionpool:https://kissanime.ru:443 "POST /Login HTTP/1.1" 503 None
+DEBUG:requests.packages.urllib3.connectionpool:Resetting dropped connection: kissanime.ru
+DEBUG:requests.packages.urllib3.connectionpool:https://kissanime.ru:443 "GET /cdn-cgi/l/chk_jschl?jschl_answer=25375887&pass=1487646434.126-RyiLbIOxM1&jschl_vc=a87986b21df0d7c76fb143a31ef8eda1 HTTP/1.1" 302 165
+DEBUG:requests.packages.urllib3.connectionpool:https://kissanime.ru:443 "GET /Login HTTP/1.1" 301 None
+DEBUG:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): kissanime.ru
+DEBUG:requests.packages.urllib3.connectionpool:http://kissanime.ru:80 "GET /Login HTTP/1.1" 200 None
+DEBUG:root:Succcesfully logged in using credentials.
+DEBUG:requests.packages.urllib3.connectionpool:http://kissanime.ru:80 "GET /Anime/Sword-Art-Online-Dub HTTP/1.1" 200 None
+INFO:root:Found | Sword Art Online (Dub) Episode 025 at /Anime/Sword-Art-Online-Dub/Episode-025?id=115946
+INFO:root:Found | Sword Art Online (Dub) Episode 024 at /Anime/Sword-Art-Online-Dub/Episode-024?id=115933
+INFO:root:Found | Sword Art Online (Dub) Episode 023 at /Anime/Sword-Art-Online-Dub/Episode-023?id=115945
+INFO:root:Found | Sword Art Online (Dub) Episode 022 at /Anime/Sword-Art-Online-Dub/Episode-022?id=115944
+INFO:root:Found | Sword Art Online (Dub) Episode 021 at /Anime/Sword-Art-Online-Dub/Episode-021?id=115943
+INFO:root:Found | Sword Art Online (Dub) Episode 020 at /Anime/Sword-Art-Online-Dub/Episode-020?id=115942
+INFO:root:Found | Sword Art Online (Dub) Episode 019 at /Anime/Sword-Art-Online-Dub/Episode-019?id=115941
+INFO:root:Found | Sword Art Online (Dub) Episode 018 at /Anime/Sword-Art-Online-Dub/Episode-018?id=115940
+INFO:root:Found | Sword Art Online (Dub) Episode 017 at /Anime/Sword-Art-Online-Dub/Episode-017?id=115939
+INFO:root:Found | Sword Art Online (Dub) Episode 016 at /Anime/Sword-Art-Online-Dub/Episode-016?id=115938
+INFO:root:Found | Sword Art Online (Dub) Episode 015 at /Anime/Sword-Art-Online-Dub/Episode-015?id=115937
+INFO:root:Found | Sword Art Online (Dub) Episode 014 at /Anime/Sword-Art-Online-Dub/Episode-014?id=115936
+INFO:root:Found | Sword Art Online (Dub) Episode 013 at /Anime/Sword-Art-Online-Dub/Episode-013?id=115935
+INFO:root:Found | Sword Art Online (Dub) Episode 012 at /Anime/Sword-Art-Online-Dub/Episode-012?id=115932
+INFO:root:Found | Sword Art Online (Dub) Episode 011 at /Anime/Sword-Art-Online-Dub/Episode-011?id=115931
+INFO:root:Found | Sword Art Online (Dub) Episode 010 at /Anime/Sword-Art-Online-Dub/Episode-010?id=115930
+INFO:root:Found | Sword Art Online (Dub) Episode 009 at /Anime/Sword-Art-Online-Dub/Episode-009?id=115929
+INFO:root:Found | Sword Art Online (Dub) Episode 008 at /Anime/Sword-Art-Online-Dub/Episode-008?id=115928
+INFO:root:Found | Sword Art Online (Dub) Episode 007 at /Anime/Sword-Art-Online-Dub/Episode-007?id=115927
+INFO:root:Found | Sword Art Online (Dub) Episode 006 at /Anime/Sword-Art-Online-Dub/Episode-006?id=115926
+INFO:root:Found | Sword Art Online (Dub) Episode 005 at /Anime/Sword-Art-Online-Dub/Episode-005?id=115925
+INFO:root:Found | Sword Art Online (Dub) Episode 004 at /Anime/Sword-Art-Online-Dub/Episode-004?id=115924
+INFO:root:Found | Sword Art Online (Dub) Episode 003 at /Anime/Sword-Art-Online-Dub/Episode-003?id=115934
+INFO:root:Found | Sword Art Online (Dub) Episode 002 at /Anime/Sword-Art-Online-Dub/Episode-002?id=115923
+INFO:root:Found | Sword Art Online (Dub) Episode 001 at /Anime/Sword-Art-Online-Dub/Episode-001?id=115922
+DEBUG:requests.packages.urllib3.connectionpool:https://kissanime.ru:443 "GET /Anime/Sword-Art-Online-Dub/Episode-025?id=115946 HTTP/1.1" 301 None
+DEBUG:requests.packages.urllib3.connectionpool:http://kissanime.ru:80 "GET /Anime/Sword-Art-Online-Dub/Episode-025?id=115946 HTTP/1.1" 200 None
+INFO:root:Video Details: None
+DEBUG:requests.packages.urllib3.connectionpool:https://kissanime.ru:443 "GET /Anime/Sword-Art-Online-Dub/Episode-024?id=115933 HTTP/1.1" 301 None
+DEBUG:requests.packages.urllib3.connectionpool:http://kissanime.ru:80 "GET /Anime/Sword-Art-Online-Dub/Episode-024?id=115933 HTTP/1.1" 200 None
+INFO:root:Video Details: None
+DEBUG:requests.packages.urllib3.connectionpool:https://kissanime.ru:443 "GET /Anime/Sword-Art-Online-Dub/Episode-023?id=115945 HTTP/1.1" 301 None
+DEBUG:requests.packages.urllib3.connectionpool:http://kissanime.ru:80 "GET /Anime/Sword-Art-Online-Dub/Episode-023?id=115945 HTTP/1.1" 200 None
+INFO:root:Video Details: None
+DEBUG:requests.packages.urllib3.connectionpool:https://kissanime.ru:443 "GET /Anime/Sword-Art-Online-Dub/Episode-022?id=115944 HTTP/1.1" 301 None
+DEBUG:requests.packages.urllib3.connectionpool:http://kissanime.ru:80 "GET /Anime/Sword-Art-Online-Dub/Episode-022?id=115944 HTTP/1.1" 200 None
+INFO:root:Video Details: None
+DEBUG:requests.packages.urllib3.connectionpool:https://kissanime.ru:443 "GET /Anime/Sword-Art-Online-Dub/Episode-021?id=115943 HTTP/1.1" 301 None
+DEBUG:requests.packages.urllib3.connectionpool:http://kissanime.ru:80 "GET /Anime/Sword-Art-Online-Dub/Episode-021?id=115943 HTTP/1.1" 200 None
+INFO:root:Video Details: None
+DEBUG:requests.packages.urllib3.connectionpool:https://kissanime.ru:443 "GET /Anime/Sword-Art-Online-Dub/Episode-020?id=115942 HTTP/1.1" 301 None
+DEBUG:requests.packages.urllib3.connectionpool:http://kissanime.ru:80 "GET /Anime/Sword-Art-Online-Dub/Episode-020?id=115942 HTTP/1.1" 200 None
+INFO:root:Video Details: None
+DEBUG:requests.packages.urllib3.connectionpool:https://kissanime.ru:443 "GET /Anime/Sword-Art-Online-Dub/Episode-019?id=115941 HTTP/1.1" 301 None
+DEBUG:requests.packages.urllib3.connectionpool:http://kissanime.ru:80 "GET /Anime/Sword-Art-Online-Dub/Episode-019?id=115941 HTTP/1.1" 200 None
+INFO:root:Video Details: None
+DEBUG:requests.packages.urllib3.connectionpool:https://kissanime.ru:443 "GET /Anime/Sword-Art-Online-Dub/Episode-018?id=115940 HTTP/1.1" 301 None
+DEBUG:requests.packages.urllib3.connectionpool:http://kissanime.ru:80 "GET /Anime/Sword-Art-Online-Dub/Episode-018?id=115940 HTTP/1.1" 200 None
+INFO:root:Video Details: None
+DEBUG:requests.packages.urllib3.connectionpool:https://kissanime.ru:443 "GET /Anime/Sword-Art-Online-Dub/Episode-017?id=115939 HTTP/1.1" 301 None
+DEBUG:requests.packages.urllib3.connectionpool:http://kissanime.ru:80 "GET /Anime/Sword-Art-Online-Dub/Episode-017?id=115939 HTTP/1.1" 200 None
+INFO:root:Video Details: None
+DEBUG:requests.packages.urllib3.connectionpool:https://kissanime.ru:443 "GET /Anime/Sword-Art-Online-Dub/Episode-016?id=115938 HTTP/1.1" 301 None
+DEBUG:requests.packages.urllib3.connectionpool:http://kissanime.ru:80 "GET /Anime/Sword-Art-Online-Dub/Episode-016?id=115938 HTTP/1.1" 200 None
+INFO:root:Video Details: None
+DEBUG:requests.packages.urllib3.connectionpool:https://kissanime.ru:443 "GET /Anime/Sword-Art-Online-Dub/Episode-015?id=115937 HTTP/1.1" 301 None
+DEBUG:requests.packages.urllib3.connectionpool:http://kissanime.ru:80 "GET /Anime/Sword-Art-Online-Dub/Episode-015?id=115937 HTTP/1.1" 200 None
+INFO:root:Video Details: None
+DEBUG:requests.packages.urllib3.connectionpool:https://kissanime.ru:443 "GET /Anime/Sword-Art-Online-Dub/Episode-014?id=115936 HTTP/1.1" 301 None
+DEBUG:requests.packages.urllib3.connectionpool:http://kissanime.ru:80 "GET /Anime/Sword-Art-Online-Dub/Episode-014?id=115936 HTTP/1.1" 200 None
+INFO:root:Video Details: None
+DEBUG:requests.packages.urllib3.connectionpool:https://kissanime.ru:443 "GET /Anime/Sword-Art-Online-Dub/Episode-013?id=115935 HTTP/1.1" 301 None
+DEBUG:requests.packages.urllib3.connectionpool:http://kissanime.ru:80 "GET /Anime/Sword-Art-Online-Dub/Episode-013?id=115935 HTTP/1.1" 200 None
+INFO:root:Video Details: None
+DEBUG:requests.packages.urllib3.connectionpool:https://kissanime.ru:443 "GET /Anime/Sword-Art-Online-Dub/Episode-012?id=115932 HTTP/1.1" 301 None
+DEBUG:requests.packages.urllib3.connectionpool:http://kissanime.ru:80 "GET /Anime/Sword-Art-Online-Dub/Episode-012?id=115932 HTTP/1.1" 200 None
+INFO:root:Video Details: None
+DEBUG:requests.packages.urllib3.connectionpool:https://kissanime.ru:443 "GET /Anime/Sword-Art-Online-Dub/Episode-011?id=115931 HTTP/1.1" 301 None
+DEBUG:requests.packages.urllib3.connectionpool:http://kissanime.ru:80 "GET /Anime/Sword-Art-Online-Dub/Episode-011?id=115931 HTTP/1.1" 200 None
+INFO:root:Video Details: None
+DEBUG:requests.packages.urllib3.connectionpool:https://kissanime.ru:443 "GET /Anime/Sword-Art-Online-Dub/Episode-010?id=115930 HTTP/1.1" 301 None
+DEBUG:requests.packages.urllib3.connectionpool:http://kissanime.ru:80 "GET /Anime/Sword-Art-Online-Dub/Episode-010?id=115930 HTTP/1.1" 200 None
+INFO:root:Video Details: None
+DEBUG:requests.packages.urllib3.connectionpool:https://kissanime.ru:443 "GET /Anime/Sword-Art-Online-Dub/Episode-009?id=115929 HTTP/1.1" 301 None
+DEBUG:requests.packages.urllib3.connectionpool:http://kissanime.ru:80 "GET /Anime/Sword-Art-Online-Dub/Episode-009?id=115929 HTTP/1.1" 200 None
+INFO:root:Video Details: None
+DEBUG:requests.packages.urllib3.connectionpool:https://kissanime.ru:443 "GET /Anime/Sword-Art-Online-Dub/Episode-008?id=115928 HTTP/1.1" 301 None
+DEBUG:requests.packages.urllib3.connectionpool:http://kissanime.ru:80 "GET /Anime/Sword-Art-Online-Dub/Episode-008?id=115928 HTTP/1.1" 200 None
+INFO:root:Video Details: None
+DEBUG:requests.packages.urllib3.connectionpool:https://kissanime.ru:443 "GET /Anime/Sword-Art-Online-Dub/Episode-007?id=115927 HTTP/1.1" 301 None
+DEBUG:requests.packages.urllib3.connectionpool:http://kissanime.ru:80 "GET /Anime/Sword-Art-Online-Dub/Episode-007?id=115927 HTTP/1.1" 200 None
+INFO:root:Video Details: None
+DEBUG:requests.packages.urllib3.connectionpool:https://kissanime.ru:443 "GET /Anime/Sword-Art-Online-Dub/Episode-006?id=115926 HTTP/1.1" 301 None
+DEBUG:requests.packages.urllib3.connectionpool:http://kissanime.ru:80 "GET /Anime/Sword-Art-Online-Dub/Episode-006?id=115926 HTTP/1.1" 200 None
+INFO:root:Video Details: None
+DEBUG:requests.packages.urllib3.connectionpool:https://kissanime.ru:443 "GET /Anime/Sword-Art-Online-Dub/Episode-005?id=115925 HTTP/1.1" 301 None
+DEBUG:requests.packages.urllib3.connectionpool:http://kissanime.ru:80 "GET /Anime/Sword-Art-Online-Dub/Episode-005?id=115925 HTTP/1.1" 200 None
+INFO:root:Video Details: None
+DEBUG:requests.packages.urllib3.connectionpool:https://kissanime.ru:443 "GET /Anime/Sword-Art-Online-Dub/Episode-004?id=115924 HTTP/1.1" 301 None
+DEBUG:requests.packages.urllib3.connectionpool:http://kissanime.ru:80 "GET /Anime/Sword-Art-Online-Dub/Episode-004?id=115924 HTTP/1.1" 200 None
+INFO:root:Video Details: None
+DEBUG:requests.packages.urllib3.connectionpool:https://kissanime.ru:443 "GET /Anime/Sword-Art-Online-Dub/Episode-003?id=115934 HTTP/1.1" 301 None
+DEBUG:requests.packages.urllib3.connectionpool:http://kissanime.ru:80 "GET /Anime/Sword-Art-Online-Dub/Episode-003?id=115934 HTTP/1.1" 200 None
+INFO:root:Video Details: None
+DEBUG:requests.packages.urllib3.connectionpool:https://kissanime.ru:443 "GET /Anime/Sword-Art-Online-Dub/Episode-002?id=115923 HTTP/1.1" 301 None
+DEBUG:requests.packages.urllib3.connectionpool:http://kissanime.ru:80 "GET /Anime/Sword-Art-Online-Dub/Episode-002?id=115923 HTTP/1.1" 200 None
+INFO:root:Video Details: None
+DEBUG:requests.packages.urllib3.connectionpool:https://kissanime.ru:443 "GET /Anime/Sword-Art-Online-Dub/Episode-001?id=115922 HTTP/1.1" 301 None
+DEBUG:requests.packages.urllib3.connectionpool:http://kissanime.ru:80 "GET /Anime/Sword-Art-Online-Dub/Episode-001?id=115922 HTTP/1.1" 200 None
+INFO:root:Video Details: None
