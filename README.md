@@ -1,5 +1,8 @@
 ### [Check status](https://reddit.com/r/kissanime)
-
+# Seems like Kissanime bot tolerance has gone down.
+I found that I have to use a browser to do a recaptcha a lot more now than before.
+It seems that Kissanime will set your IP to temporarily disabled from watching / downloading episodes until a captcha is completed.
+A 9anime.to downloader is currently in the works as a replacement.
 # Kiss anime downloader
 A CLI program designed for servers to download full seasons of anime from Kissanime.
 I suggest using this on a Plex server, but it can also be used in any environment.
